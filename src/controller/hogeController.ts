@@ -5,4 +5,5 @@ export default function hogeController(req: Express.Request, res: Express.Respon
         "contents": "hoge text."
     }
     res.render("./hoge.ejs", data);
+    next();
 }
