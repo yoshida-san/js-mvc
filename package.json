@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/jest",
+    "ts-node": "./node_modules/.bin/ts-node",
     "start": "./node_modules/.bin/ts-node ./src/app.ts"
   },
   "author": "",
@@ -16,5 +17,23 @@
     "express": "^4.16.4",
     "ts-node": "^8.0.2",
     "typescript": "^3.3.3333"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.7.1",
+    "ts-jest": "^24.0.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/test/**/*.ts?(x)"
+    ]
   }
 }
