@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 app.set("views", "./src/views");
 
 app.get("/", (req: express.Request, res: express.Response) => {
-    res.send("Hello world!");
+    res.render("./home.ejs");
 });
 app.get("/user", userController);
 
